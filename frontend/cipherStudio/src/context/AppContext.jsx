@@ -18,7 +18,9 @@ export const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.defaults.baseURL = import.meta.env.VITE_API_URL;
+    const baseURL = import.meta.env.VITE_API_URL || "https://cipherstudio-3.onrender.com";
+    axios.defaults.baseURL = baseURL;
+    console.log("API Base URL:", baseURL);
   }, []);
 
   useEffect(() => {
