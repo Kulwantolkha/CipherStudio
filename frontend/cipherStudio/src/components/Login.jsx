@@ -31,11 +31,11 @@ const Login = () => {
         setEmail("");
         setPassword("");
       } else {
-        console.log("Login state: ",state);
-        toast.error(data.message,state);
+        console.log("Login state: ", state);
+        toast.error(data.message, state);
       }
     } catch (error) {
-      console.log("Login error: ",error);
+      console.log("Login error: ", error);
       toast.error(error.message);
     }
   };
@@ -220,7 +220,11 @@ const Login = () => {
             required
           />
         </div>
-
+        <div className="text-black">
+          <span className="text-sm">Demo ID: </span> demo@gmail.com
+          <br />
+          <span className="password-label">Password: </span> 123456789
+        </div>
         {state === "login" && (
           <div className="flex items-center justify-between mb-6">
             <a className="text-blue-600 underline cursor-pointer" href="#">

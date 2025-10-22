@@ -11,7 +11,18 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+const corsOptions = app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://cipher-studio-murex.vercel.app"
+  ],
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true
+}));
+
+app.use(cors(corsOptions));
+
 app.use(express.json());
 
 connectDB();
