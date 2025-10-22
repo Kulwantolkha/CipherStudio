@@ -18,7 +18,7 @@ const Login = () => {
         state === "login"
           ? { email, password }
           : { firstName, lastName, mobile, email, password };
-        const { data } = await axios.post(`http://localhost:5000/api/auth/${state}`, payload);
+      const { data } = await axios.post(`/api/auth/${state}`, payload);
 
       if (data.success) {
         setToken(data.token);
