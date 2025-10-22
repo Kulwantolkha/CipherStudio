@@ -2,6 +2,9 @@
 
 A modern, real-time code editor and collaboration platform built with the MERN stack. Create projects, write code, and see live previews instantly with integrated Sandpack editor.
 
+🌐 **Live Demo**: [https://cipher-studio-murex.vercel.app/](https://cipher-studio-murex.vercel.app/)
+
+
 ![CipherStudio](https://img.shields.io/badge/Version-1.0.0-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![React](https://img.shields.io/badge/React-18.x-61dafb)
